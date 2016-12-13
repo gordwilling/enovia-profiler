@@ -1,0 +1,28 @@
+<aspectj>
+  <aspects>
+    <aspect name="com.highbar.tools.instrumentation.aspects.EnoviaProfilingAspect"/>
+    <!--<aspect name="com.highbar.tools.instrumentation.aspects.LoggingAspect"/>-->
+  </aspects>
+  <weaver options="-verbose">
+
+    <!-- Do not weave anything in these packages -->
+    <!--<exclude within="org..* AND !org.apache.jsp..* "/>-->
+    <!--<exclude within="java..*"/>-->
+    <!--<exclude within="javax..*"/>    -->
+    <!--<exclude within="sun..*"/>-->
+    <!--<exclude within="com.sun..*"/>-->
+    <!--<exclude within="lge.gpdm..*"/>-->
+    <!--<exclude within="com.matrixone.MCADIntegration..*"/>-->
+    <!--<exclude within="matrix.db..* AND !matrix.db.JPO*"/>-->
+    <!--<exclude within="com.matrixone.jdl..*"/>-->
+    <!--<exclude within="com.matrixone.jni..*"/>-->
+    <!--<exclude within="com.matrixone.apps.document.util.MxDebug"/>-->
+    <!--<exclude within="com.highbar.tools.instrumentation.LoggingAspect"/>-->
+    <!--<exclude within="com.highbar.tools.instrumentation.EnoviaProfilingAspect"/>-->
+
+    <!-- Include these packages -->
+
+
+  </weaver>
+
+</aspectj>

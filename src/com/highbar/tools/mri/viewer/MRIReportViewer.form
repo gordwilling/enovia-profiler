@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.highbar.tools.mri.viewer.MRIReportViewer">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="888" height="580"/>
+    </constraints>
+    <properties>
+      <preferredSize width="800" height="600"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="927c3" binding="mainTabbedPane">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="600" height="400"/>
+          </grid>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="9ff8a" binding="summaryPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Summary"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <scrollpane id="8a5b3">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="373c" class="javax.swing.JTable" binding="mainSummaryTable">
+                    <constraints/>
+                    <properties/>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="5ce33" binding="callStackPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Call Stack"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="3084f" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <toolbar id="cec30">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="1c73e" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <maximumSize width="100" height="22"/>
+                          <minimumSize width="100" height="22"/>
+                          <preferredSize width="100" height="22"/>
+                          <text value="Filter By Timing:"/>
+                        </properties>
+                      </component>
+                      <component id="95d47" class="javax.swing.JSlider" binding="timingSlider">
+                        <constraints/>
+                        <properties>
+                          <preferredSize width="100" height="21"/>
+                          <value value="0"/>
+                        </properties>
+                      </component>
+                      <component id="7834e" class="javax.swing.JLabel" binding="timingSliderValue">
+                        <constraints/>
+                        <properties>
+                          <inheritsPopupMenu value="false"/>
+                          <maximumSize width="-1" height="22"/>
+                          <minimumSize width="60" height="22"/>
+                          <preferredSize width="60" height="22"/>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </toolbar>
+                  <component id="692a6" class="javax.swing.JToolBar$Separator">
+                    <constraints/>
+                    <properties>
+                      <orientation value="1"/>
+                      <separatorSize width="16" height="30"/>
+                    </properties>
+                  </component>
+                  <toolbar id="c243b">
+                    <constraints/>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="238df" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="Include Types:"/>
+                        </properties>
+                      </component>
+                      <component id="10acc" class="javax.swing.JCheckBox" binding="triggerManagerCheckBox" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <text value="&amp;Trigger Manager"/>
+                        </properties>
+                      </component>
+                      <component id="d2176" class="javax.swing.JCheckBox" binding="triggersCheckBox" default-binding="true">
+                        <constraints/>
+                        <properties>
+                          <text value="T&amp;riggers"/>
+                        </properties>
+                      </component>
+                      <component id="bae" class="javax.swing.JCheckBox" binding="jspCheckBox">
+                        <constraints/>
+                        <properties>
+                          <text value="&amp;JSPs"/>
+                        </properties>
+                      </component>
+                      <component id="747d7" class="javax.swing.JCheckBox" binding="apiCheckBox">
+                        <constraints/>
+                        <properties>
+                          <text value="&amp;API"/>
+                        </properties>
+                      </component>
+                      <component id="76ef9" class="javax.swing.JCheckBox" binding="jpoCheckBox">
+                        <constraints/>
+                        <properties>
+                          <text value="J&amp;POs"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </toolbar>
+                  <component id="93966" class="javax.swing.JToolBar$Separator">
+                    <constraints/>
+                    <properties>
+                      <orientation value="1"/>
+                      <separatorSize width="16" height="30"/>
+                    </properties>
+                  </component>
+                  <component id="3d0af" class="javax.swing.JButton" binding="scrollToRowButton">
+                    <constraints/>
+                    <properties>
+                      <text value="&amp;Scroll To Selected Row"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <splitpane id="6e474">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="200" height="200"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <dividerLocation value="239"/>
+                  <dividerSize value="4"/>
+                  <orientation value="0"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <scrollpane id="b27e9">
+                    <constraints>
+                      <splitpane position="left"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="9b55" class="javax.swing.JTable" binding="callStackTable">
+                        <constraints/>
+                        <properties>
+                          <autoResizeMode value="2"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </scrollpane>
+                  <splitpane id="76697">
+                    <constraints>
+                      <splitpane position="right"/>
+                    </constraints>
+                    <properties>
+                      <dividerLocation value="400"/>
+                      <dividerSize value="4"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="a57f1">
+                        <constraints>
+                          <splitpane position="right"/>
+                        </constraints>
+                        <properties>
+                          <horizontalScrollBarPolicy value="32"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="406b2" class="javax.swing.JTable" binding="methodParametersTable" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <autoResizeMode value="2"/>
+                              <enabled value="false"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                      <scrollpane id="badf2">
+                        <constraints>
+                          <splitpane position="left"/>
+                        </constraints>
+                        <properties>
+                          <horizontalScrollBarPolicy value="32"/>
+                          <verticalScrollBarPolicy value="20"/>
+                        </properties>
+                        <border type="none"/>
+                        <children>
+                          <component id="5152" class="javax.swing.JTable" binding="methodAncestorsTable" custom-create="true">
+                            <constraints/>
+                            <properties>
+                              <enabled value="false"/>
+                              <showHorizontalLines value="true"/>
+                              <showVerticalLines value="true"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </splitpane>
+                </children>
+              </splitpane>
+            </children>
+          </grid>
+          <grid id="a548d" binding="triggersPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <tabbedpane title="Triggers"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <tabbedpane id="29bb6" binding="triggersTabPane">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="200" height="200"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <tabPlacement value="1"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="dd243" binding="triggerSummaryPanel" layout-manager="GridLayoutManager" row-count="8" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Summary"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="77139" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Trigger Manager Instances Created:"/>
+                        </properties>
+                      </component>
+                      <hspacer id="fae32">
+                        <constraints>
+                          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                      </hspacer>
+                      <vspacer id="ae1c1">
+                        <constraints>
+                          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                      </vspacer>
+                      <component id="6a1dc" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Instantiation Overhead:"/>
+                        </properties>
+                      </component>
+                      <component id="124c" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="mxMain Invocations:"/>
+                        </properties>
+                      </component>
+                      <component id="d2815" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Invocation Overhead:"/>
+                        </properties>
+                      </component>
+                      <component id="575e4" class="javax.swing.JLabel" binding="triggerManagerInstancesLabel">
+                        <constraints>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="9bfa5" class="javax.swing.JLabel" binding="triggerManagerInstantiationOverheadLabel">
+                        <constraints>
+                          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="6f6e8" class="javax.swing.JLabel" binding="triggerManagerMxMainInvocationsLabel">
+                        <constraints>
+                          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="35f78" class="javax.swing.JLabel" binding="triggerManagerInvocationOverheadLabel">
+                        <constraints>
+                          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="20331" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Active Triggers Fired:"/>
+                        </properties>
+                      </component>
+                      <component id="997" class="javax.swing.JLabel" binding="activeTriggersFiredLabel">
+                        <constraints>
+                          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="4f234" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Inactive Triggers Encounted:"/>
+                        </properties>
+                      </component>
+                      <component id="64ddc" class="javax.swing.JLabel" binding="inactiveTriggerEncounteredLabel">
+                        <constraints>
+                          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                      <component id="920f4" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value="Missing Trigger Program Parameters:"/>
+                        </properties>
+                      </component>
+                      <component id="45f0" class="javax.swing.JLabel" binding="missingTriggerProgramParametersLabel">
+                        <constraints>
+                          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <text value=""/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <grid id="e436e" binding="activeTriggerPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Active"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="bcf03">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="676d0" class="javax.swing.JTable" binding="activeTriggerTable">
+                            <constraints/>
+                            <properties/>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                  <grid id="2b4e0" binding="inactiveTriggerPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Inactive"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="e336c">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="41a6d" class="javax.swing.JTable" binding="inactiveTriggerTable">
+                            <constraints/>
+                            <properties/>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                  <grid id="42308" binding="missingTriggerPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <tabbedpane title="Missing"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <scrollpane id="35be8">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="79df0" class="javax.swing.JTable" binding="missingTriggerTable">
+                            <constraints/>
+                            <properties/>
+                          </component>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </tabbedpane>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+</form>

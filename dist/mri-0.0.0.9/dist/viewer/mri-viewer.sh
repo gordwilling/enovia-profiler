@@ -1,0 +1,2 @@
+#!/bin/bash
+java -Xms256m -Xmx384m -cp "./lib/activation.jar:./lib/jaxb-api.jar:./lib/jaxb-impl.jar:./lib/jaxb-xjc.jar:./lib/jsr173_1.0_api.jar:./lib/highbar.jar:./lib/log4j-1.2.8.jar:./lib.forms_rt.jar" com.highbar.tools.mri.ui.MRIReportViewer
